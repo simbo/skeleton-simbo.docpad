@@ -1,0 +1,37 @@
+###
+# + Custom Task Definitions
+# https://github.com/firstandthird/load-grunt-config
+# ==================================================================
+###
+
+# copy dependencies from bower
+copydeps:
+  - 'clean:deps'
+  - 'copy:jquery'
+
+# build javascripts
+buildjs:
+  - 'coffeelint:all'
+  - 'coffee:all'
+  - 'jshint:all'
+  - 'uglify:main'
+
+# build stylesheets
+buildcss:
+  - 'stylus:main'
+  - 'autoprefixer:main'
+  - 'css_mqpacker:main'
+  - 'csswring:main'
+
+# build all
+build:
+  - copydeps
+  - buildcss
+  - buildjs
+  - 'update_json:bower'
+
+# default task
+default:
+  - build
+
+# = Custom Task Definitions
