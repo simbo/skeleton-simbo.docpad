@@ -1,0 +1,24 @@
+{
+  "name": "skeleton-simbo.docpad",
+  "version": "0.1.0",
+  "description": "Simbo's DocPad Skeleton",
+  "author": "Simon Lepel <hallo@simonlepel.de>",
+  "keywords": [
+    "docpad",
+    "skeleton"
+  ],
+  "homepage": "https://github.com/simbo/skeleton-simbo.docpad",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simbo/skeleton-simbo.docpad.git"
+  },
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}
