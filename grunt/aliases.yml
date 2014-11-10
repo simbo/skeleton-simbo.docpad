@@ -23,15 +23,19 @@ buildcss:
   - 'css_mqpacker:main'
   - 'csswring:main'
 
-# build all
-build:
+# pre-build
+prebuild:
   - copydeps
+  - 'update_json:bower'
+
+# build
+build:
   - buildcss
   - buildjs
-  - 'update_json:bower'
 
 # default task
 default:
+  - prebuild
   - build
 
 # = Custom Task Definitions

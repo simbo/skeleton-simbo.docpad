@@ -58,10 +58,7 @@ module.exports =
         grunt:
             writeAfter:             false
             generateBefore:         false
-            generateAfter:          [
-                                        'buildcss'
-                                        'buildjs'
-                                    ]
+            generateAfter:          [ 'build' ]
 
         marked:
             markedOptions:
