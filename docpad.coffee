@@ -24,7 +24,7 @@ module.exports =
 
         getPreparedTitle:           ->
                                     if @document.title
-                                        "#{@document.title} | #{site.title}"
+                                        "#{@document.title} | #{@site.title}"
                                     else
                                         @site.title
 
