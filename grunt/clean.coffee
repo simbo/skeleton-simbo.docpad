@@ -13,7 +13,7 @@ module.exports =
             ]
 
     # generated js
-    js:    [
+    js:     [
                 '<%= globalConfig.assets %>/js/**/*.js'
                 '<%= globalConfig.assets %>/js/**/*.map'
                 '!<%= globalConfig.assets %>/js/vendor/**/*'

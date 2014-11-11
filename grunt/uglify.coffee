@@ -14,6 +14,7 @@ module.exports =
     # main scripts
     main:
         files:
+            # dest : [ src, src, ... ]
             '<%= globalConfig.assets %>/js/main.min.js': [
                 '<%= globalConfig.assets %>/js/main.js'
             ]
