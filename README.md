@@ -18,11 +18,11 @@ Simbo's DocPad Skeleton
 
   - assets versioning with cache busting
 
-  - Toffee as template language
+  - [Toffee](https://github.com/malgorithms/toffee) as template language
 
-  - GFM and PHP Markdown Extra support
+  - [GFM](https://help.github.com/articles/github-flavored-markdown/) and [PHP Markdown Extra](https://michelf.ca/projects/php-markdown/extra/) support
 
-  - sourcecode highlighting for multiple languages
+  - Sourcecode highlighting for multiple languages
 
   - SEO friendly URLs; "/YYYY/MM/TITLE" for posts
 
@@ -35,3 +35,29 @@ Simbo's DocPad Skeleton
   - jQuery using CDN with local alternative source
 
   - Google Webfonts using WebfontLoader
+
+### Setup
+
+You need to have installed
+    [Node.js](http://nodejs.org/),
+    [Bower](),
+    [Grunt]() and
+    [DocPad]()
+gobally.  
+Clone the repo or download and unpack the zip file.  
+Use the following commands to install all dependencies:
+
+```sh
+npm install
+bower install
+grunt copydeps
+```
+
+### Usage
+
+```sh
+npm run dev    # build and run in development environment
+npm run live   # build and run in production environment
+npm run build  # build in development environment
+```
+
