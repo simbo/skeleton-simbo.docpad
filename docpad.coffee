@@ -53,7 +53,6 @@ module.exports =
 
         consolidate:
             toffee:                 true
-            eco:                    true
 
         grunt:
             writeAfter:             false
@@ -65,6 +64,8 @@ module.exports =
                 pedantic:           false
                 gfm:                true
                 sanitize:           false
+                tables:             true
+                smartypants:        false
                 highlight:          null
 
 
