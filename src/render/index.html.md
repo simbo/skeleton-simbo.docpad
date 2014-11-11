@@ -4,9 +4,7 @@ layout: default
 
 Hallo Welt
 
-bla
+### Markdown Tests
 
-```js
-var foo;
-console.debug(123, foo);
-```
+  - [GFM](tests/markdown-gfm.html)
+  
