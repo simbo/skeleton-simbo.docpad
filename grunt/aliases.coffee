@@ -16,6 +16,7 @@ module.exports =
     copydeps: [
         'clean:deps'
         'copy:jquery'
+        'copy:normalizecss'
     ]
 
     # build javascripts
