@@ -11,25 +11,25 @@ module.exports =
 
     templateData:
         site:
-            title:                  "Simbo's DocPad Skeleton"
-            description:            """
-                                    Some informative description for search engine results.
-                                    """
-            styles:                 [
-                                        '/assets/css/main.min.css'
-                                    ]
-            scripts:                [
-                                        '/assets/js/main.min.js'
-                                    ]
+            title:                      "Simbo's DocPad Skeleton"
+            description:                """
+                                        Some informative description for search engine results.
+                                        """
+            styles:                     [
+                                            '/assets/css/main.min.css'
+                                        ]
+            scripts:                    [
+                                            '/assets/js/main.min.js'
+                                        ]
 
-        getPreparedTitle:           ->
-                                    if @document.title
-                                        "#{@document.title} | #{@site.title}"
-                                    else
-                                        @site.title
+        getPreparedTitle:               ->
+                                            if @document.title
+                                                "#{@document.title} | #{@site.title}"
+                                            else
+                                                @site.title
 
-        getPreparedDescription:     ->
-                                    @document.description or @site.description
+        getPreparedDescription:         ->
+                                            @document.description or @site.description
 
 
     # =================================
@@ -39,25 +39,25 @@ module.exports =
 
         stylus:
             stylusLibraries:
-                nib:                false
+                nib:                    false
             stylusOptions:
-                paths:              []
-                compress:           false
+                paths:                  []
+                compress:               false
                 sourcemap:
-                    inline:         true
+                    inline:             true
 
         coffeescript:
             compileOptions:
-                sourceMap:          true
-                bare:               true
+                sourceMap:              true
+                bare:                   true
 
         consolidate:
-            toffee:                 true
+            toffee:                     true
 
         grunt:
-            writeAfter:             false
-            generateBefore:         false
-            generateAfter:          [ 'build' ]
+            writeAfter:                 false
+            generateBefore:             false
+            generateAfter:              [ 'build' ]
 
         highlightjs:
             aliases:
@@ -90,18 +90,18 @@ module.exports =
 
     environments:
         production:
-            port:                   9775
-            maxAge:                 86400000
+            port:                       9775
+            maxAge:                     86400000
             templateData:
                 site:
-                    url:            "http://myawesomedocpadsite.io"
+                    url:                "http://myawesomedocpadsite.io"
 
         development:
-            port:                   9005
-            maxAge:                 false
+            port:                       9005
+            maxAge:                     false
             templateData:
                 site:
-                    url:            "http://localhost:9005"
+                    url:                "http://localhost:9005"
 
 
 # = DocPad Configuration
