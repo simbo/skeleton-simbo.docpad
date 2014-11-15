@@ -3,10 +3,10 @@
 # ==================================================================
 
 out
-src/raw/assets/js/vendor/**/*
-src/raw/assets/css/vendor/**/*
 src/static/assets/js/vendor/**/*
 src/static/assets/css/vendor/**/*
+src/static/assets-dev/coffee/vendor/**/*
+src/static/assets-dev/stylus/imports/vendor/**/*
 
 # = Project related
 

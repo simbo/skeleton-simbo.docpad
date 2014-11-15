@@ -10,6 +10,8 @@ module.exports =
     deps:   [
                 '<%= globalConfig.rawAssets %>/js/vendor/**/*'
                 '<%= globalConfig.rawAssets %>/css/vendor/**/*'
+                '<%= globalConfig.rawAssetsDev %>/coffee/vendor/**/*'
+                '<%= globalConfig.rawAssetsDev %>/stylus/imports/vendor/**/*'
             ]
 
     # generated js
