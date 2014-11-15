@@ -21,6 +21,7 @@ module.exports =
             scripts:                    [
                                             '/assets/js/main.min.js'
                                         ]
+            jqueryVersion:              '2.1.1'
             googleAnalytics:            'UA-12345678-9'
 
         getPreparedTitle:               ->

@@ -8,6 +8,7 @@
         <meta name="description" content="#{ getPreparedDescription() }" />
         #{ getBlock('meta').toHTML() }
         #{ getBlock('styles').add( site.styles ).toHTML() }
+        #{ partial 'jquery' }
         #{ getBlock('scripts').add( site.scripts, defer: false ).toHTML() }
     </head>
     <body>
