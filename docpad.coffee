@@ -23,6 +23,10 @@ module.exports =
                                         ]
             jqueryVersion:              '2.1.1'
             googleAnalytics:            'UA-12345678-9'
+            googleFonts:                [
+                                            'Istok+Web:400,400italic,700,700italic:latin'
+                                            'Anonymous+Pro:400,400italic,700,700italic:latin'
+                                        ]
 
         getPreparedTitle:               ->
                                             if @document.title
