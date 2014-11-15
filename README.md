@@ -1,7 +1,8 @@
 Simbo's DocPad Skeleton
 =======================
 
-### Goals
+Goals
+--------------------------------------------------------------------------------
 
   - Full build processes for styles and scripts from
         [Stylus](https://github.com/LearnBoost/stylus) and
@@ -11,10 +12,11 @@ Simbo's DocPad Skeleton
         [CSS MQPacker](https://github.com/hail2u/node-css-mqpacker) and
         [CSSWring](https://github.com/hail2u/node-csswring)
     in CSS post processing, 
+        [CoffeeLint](https://github.com/clutchski/coffeelint) /
         [JSHint](https://github.com/jshint/jshint/) and
         [UglifyJS](https://github.com/mishoo/UglifyJS)
     in Javascript post processing and full sourcemaps support for scripts and
-    styles through all process steps.
+    styles through all steps.
 
   - assets versioning with cache busting
 
@@ -36,13 +38,18 @@ Simbo's DocPad Skeleton
 
   - Google Webfonts using WebfontLoader
 
+
+
+Getting started
+--------------------------------------------------------------------------------
+
 ### Setup
 
 You need to have installed
-    [Node.js](http://nodejs.org/),
-    [Bower](),
-    [Grunt]() and
-    [DocPad]()
+    [Node](http://nodejs.org/),
+    [Bower](http://bower.io/),
+    [Grunt](http://gruntjs.com/) and
+    [DocPad](https://docpad.org/)
 gobally.  
 Clone the repo or download and unpack the zip file.  
 Use the following commands to install all dependencies:
@@ -61,3 +68,12 @@ npm run live   # build and run in production environment
 npm run build  # build in development environment
 ```
 
+Further explanations and FAQ
+--------------------------------------------------------------------------------
+
+### Why Robotskirt/Sundown as markdown parser?
+
+Notes
+--------------------------------------------------------------------------------
+
+http://takitapart.com/posts/organizing-docpad/
