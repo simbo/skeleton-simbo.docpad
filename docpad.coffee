@@ -68,6 +68,10 @@ module.exports =
                 smartypants:        false
                 highlight:          null
 
+        highlightjs:
+            aliases:
+                missinglanguage:        'alternativelanguage'
+
 
     # =================================
     # Environment Configuration

@@ -20,6 +20,7 @@
   ],
   "dependencies": {
     "jquery": "~2.1.1",
+    "highlightjs": "~8.3.0",
     "normalize.css": "~3.0.2"
   }
 }

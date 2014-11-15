@@ -13,6 +13,15 @@ module.exports =
         dest:       '<%= globalConfig.rawAssets %>/js/vendor/jquery/'
         flatten:    true
 
+    # highlight.js styles
+    highlightjs:
+        expand:     true
+        cwd:        '<%= globalConfig.bower %>/highlightjs/styles/'
+        src:        [ 'github.css' ]
+        dest:       '<%= globalConfig.rawAssetsDev %>/stylus/imports/vendor/highlightjs/'
+        rename:     (dest, src) ->
+                        dest + src.replace( /\.css$/, ".styl" )
+
     # normalize.css styles
     normalizecss:
         expand:     true
