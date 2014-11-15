@@ -21,6 +21,7 @@ module.exports =
             scripts:                    [
                                             '/assets/js/main.min.js'
                                         ]
+            googleAnalytics:            'UA-12345678-9'
 
         getPreparedTitle:               ->
                                             if @document.title

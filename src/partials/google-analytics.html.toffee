@@ -1,0 +1,10 @@
+{#
+    if site.googleAnalytics {:
+        <script async src='//www.google-analytics.com/analytics.js'></script>
+        <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', '#{ site.googleAnalytics }', 'auto');
+        ga('send', 'pageview');
+        </script>
+    :}
+#}
