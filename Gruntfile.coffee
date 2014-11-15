@@ -13,9 +13,10 @@ module.exports = (grunt) ->
         _.root          = '.'
         _.bower         = _.root + '/bower_components'
         _.out           = _.root + '/out'
+        _.src           = _.root + '/src'
         _.assets        = _.out  + '/assets'
         _.assetsDev     = _.out  + '/assets-dev'
-        _.raw           = _.root + '/static'
+        _.raw           = _.src  + '/static'
         _.rawAssets     = _.raw  + '/assets'
         _.rawAssetsDev  = _.raw  + '/assets-dev'
         _
