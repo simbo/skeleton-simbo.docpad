@@ -98,6 +98,24 @@ module.exports =
             generateBefore:             false
             generateAfter:              [ 'build' ]
 
+        # https://github.com/grassator/docpad-plugin-datefromfilename
+        datefromfilename:
+            removeDate:                 true
+            dateRegExp:                 /\b(\d{4})-(\d{2})-(\d{2})-/
+
+        # https://github.com/mgroves84/docpad-plugin-dateurls
+        dateurls:
+            cleanurl:                   true
+            collectionName:             'posts'
+            dateFormat:                 '/YYYY/MM'
+
+        # https://github.com/docpad/docpad-plugin-cleanurls
+        cleanurls:
+            enabled:                    true
+            collectionName:             'cleanurls'
+            static:                     true
+            trailingSlashes:            true
+
         # https://github.com/docpad/docpad-plugin-highlightjs/
         highlightjs:
             aliases:
