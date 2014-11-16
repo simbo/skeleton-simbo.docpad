@@ -67,6 +67,12 @@ module.exports =
                     $ne: '_posts'
             , [ title: 1 ]
 
+        # cleanurls collection, providing 'skipCleanUrls' meta option
+        cleanurls: (database) ->
+            @getCollection('html').findAllLive
+                skipCleanUrls:
+                    $ne: true
+
     # =================================
     # Plugin Configuration
 
