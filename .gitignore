@@ -28,6 +28,7 @@ sftp-config.json
 node_modules/
 npm-debug.log
 bower_components/
+v8.log
 
 # = IDEs / DevEnv
 
