@@ -46,6 +46,26 @@ module.exports =
         getPreparedDescription: ->
             @document.description or @site.description
 
+    # =================================
+    # Collections
+
+    collections:
+
+        # all posts, ordered by descending date
+        posts: (database) ->
+            @getCollection('html').findAllLive
+                relativeOutDirPath: '_posts'
+            , [ date: -1 ]
+            .on 'add', (document) ->
+                document.setMetaDefaults
+                    layout: 'post'
+
+        # all pages (not posts), ordered by ascending title
+        pages: (database) ->
+            collection = @getCollection('html').findAllLive
+                relativeOutDirPath:
+                    $ne: '_posts'
+            , [ title: 1 ]
 
     # =================================
     # Plugin Configuration
