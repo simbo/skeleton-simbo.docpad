@@ -7,7 +7,7 @@
 module.exports =
 
     # =================================
-    # Template Configuration
+    # Template data and functions
 
     templateData:
         site:
@@ -15,12 +15,8 @@ module.exports =
             description:                """
                                         Some informative description for search engine results.
                                         """
-            styles:                     [
-                                            '/assets/css/main.min.css'
-                                        ]
-            scripts:                    [
-                                            '/assets/js/main.min.js'
-                                        ]
+            styles:                     ['/assets/css/main.min.css']
+            scripts:                    ['/assets/js/main.min.js']
             jqueryVersion:              '2.1.1'
             googleAnalytics:            'UA-12345678-9'
             googleFonts:                [
@@ -28,14 +24,14 @@ module.exports =
                                             'Anonymous+Pro:400,400italic,700,700italic:latin'
                                         ]
 
-        getPreparedTitle:               ->
-                                            if @document.title
-                                                "#{@document.title} | #{@site.title}"
-                                            else
-                                                @site.title
+        getPreparedTitle: ->
+            if @document.title
+                "#{@document.title} | #{@site.title}"
+            else
+                @site.title
 
-        getPreparedDescription:         ->
-                                            @document.description or @site.description
+        getPreparedDescription: ->
+            @document.description or @site.description
 
 
     # =================================
@@ -101,6 +97,7 @@ module.exports =
     # Environment Configuration
 
     environments:
+
         production:
             port:                       9775
             maxAge:                     86400000
@@ -114,6 +111,5 @@ module.exports =
             templateData:
                 site:
                     url:                "http://localhost:9005"
-
 
 # = DocPad Configuration
