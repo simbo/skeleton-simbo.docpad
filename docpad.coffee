@@ -7,6 +7,19 @@
 module.exports =
 
     # =================================
+    # Paths Configuration
+
+    outPath:                            'out'
+    srcPath:                            'src'
+    documentsPaths:                     ['render']
+    filesPaths:                         ['static']
+    layoutsPaths:                       ['layouts']
+    ignorePaths:                        false
+    ignoreHiddenFiles:                  false
+    ignoreCommonPatterns:               true
+    ignoreCustomPatterns:               false
+
+    # =================================
     # Template data and functions
 
     templateData:
