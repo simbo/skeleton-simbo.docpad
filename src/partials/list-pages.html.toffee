@@ -1,0 +1,11 @@
+<ul>
+    {#
+        for page in getCollection('pages').toJSON() {:
+            <li>
+                <a href="#{page.url}">
+                    #{ if page.title then page.title else "(no title)" }
+                </a>
+            </li>
+        :}
+    #}
+</ul>

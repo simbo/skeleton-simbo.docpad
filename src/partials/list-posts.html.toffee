@@ -1,0 +1,11 @@
+<ul>
+    {#
+        for post in getCollection('posts').toJSON() {:
+            <li>
+                <a href="#{post.url}">
+                    #{ if post.title then post.title else "(no title)" }
+                </a>
+            </li>
+        :}
+    #}
+</ul>
