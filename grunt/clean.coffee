@@ -33,4 +33,9 @@ module.exports =
                 '<%= globalConfig.out %>'
             ]
 
+    # cleanup generated content
+    out_cleanup: [
+                '<%= globalConfig.out %>/_posts'
+            ]
+
 # = Task Config: Clean

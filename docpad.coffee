@@ -96,7 +96,10 @@ module.exports =
         grunt:
             writeAfter:                 false
             generateBefore:             false
-            generateAfter:              [ 'build' ]
+            generateAfter:              [
+                                            'build'
+                                            'clean:out_cleanup'
+                                        ]
 
         # https://github.com/grassator/docpad-plugin-datefromfilename
         datefromfilename:
