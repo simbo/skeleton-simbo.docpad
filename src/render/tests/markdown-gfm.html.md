@@ -1,6 +1,6 @@
 ---
-layout: default
 title: GFM Markdown Tests
+layout: page
 ---
 
 https://help.github.com/articles/github-flavored-markdown/
