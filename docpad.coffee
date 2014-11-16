@@ -43,6 +43,7 @@ module.exports =
 
     plugins:
 
+        # https://github.com/docpad/docpad-plugin-stylus
         stylus:
             stylusLibraries:
                 nib:                    false
@@ -52,23 +53,28 @@ module.exports =
                 sourcemap:
                     inline:             true
 
+        # https://github.com/docpad/docpad-plugin-coffeescript
         coffeescript:
             compileOptions:
                 sourceMap:              true
                 bare:                   true
 
+        # https://github.com/robloach/docpad-plugin-consolidate
         consolidate:
             toffee:                     true
 
+        # https://github.com/robloach/docpad-plugin-grunt
         grunt:
             writeAfter:                 false
             generateBefore:             false
             generateAfter:              [ 'build' ]
 
+        # https://github.com/docpad/docpad-plugin-highlightjs/
         highlightjs:
             aliases:
                 missinglanguage:        'alternativelanguage'
 
+        # https://github.com/docpad/docpad-plugin-robotskirt
         robotskirt:
             robotskirtOptions:
                 EXT_AUTOLINK:           true
