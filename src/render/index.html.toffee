@@ -1,0 +1,7 @@
+---
+title: Index
+layout: page
+---
+
+#{ partial 'list-pages' }
+#{ partial 'list-posts' }
