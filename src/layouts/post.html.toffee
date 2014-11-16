@@ -1,0 +1,5 @@
+#{ partial 'head' }
+<article>
+    #{ content }
+</article>
+#{ partial 'foot' }
