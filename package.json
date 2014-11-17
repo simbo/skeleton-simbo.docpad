@@ -53,6 +53,7 @@
     "grunt-csswring": "^1.1.0",
     "grunt-update-json": "^0.2.1",
     "load-grunt-config": "^0.16.0",
+    "moment": "^2.8.3",
     "time-grunt": "^1.0.0",
     "toffee": "^0.1.12"
   }

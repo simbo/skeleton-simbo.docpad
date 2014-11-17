@@ -23,6 +23,7 @@ module.exports =
     # Template data and functions
 
     templateData:
+
         site:
             title:                      "Simbo's DocPad Skeleton"
             description:                """
@@ -36,6 +37,15 @@ module.exports =
                                             'Istok+Web:400,400italic,700,700italic:latin'
                                             'Anonymous+Pro:400,400italic,700,700italic:latin'
                                         ]
+            dateFormat:                 "Do MMM YYYY"
+            dateFormatShort:            "DD.MM.YY"
+            dateFormatLong:             "dddd, Do MMMM YYYY"
+            excerptLength:              140
+
+        moment: do ->
+            moment = require 'moment'
+            moment.locale 'de'
+            moment
 
         getPreparedTitle: ->
             if @document.title
@@ -45,6 +55,11 @@ module.exports =
 
         getPreparedDescription: ->
             @document.description or @site.description
+
+        getPostDate: (post, format) ->
+            post = post or @document
+            format = format or @site.dateFormat
+            @moment(post.date).format(format)
 
     # =================================
     # Collections
