@@ -1,3 +1,5 @@
 #{ partial 'head' }
-#{ content }
+<main class="page">
+    #{ partial 'article', { type: 'page' } }
+</main>
 #{ partial 'foot' }

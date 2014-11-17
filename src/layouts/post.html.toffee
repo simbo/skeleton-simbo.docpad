@@ -1,5 +1,5 @@
 #{ partial 'head' }
-<article>
-    #{ content }
-</article>
+<main class="post">
+    #{ partial 'article' }
+</main>
 #{ partial 'foot' }
