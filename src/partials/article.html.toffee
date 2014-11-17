@@ -1,0 +1,33 @@
+{#
+    article = article or document
+    articleExcerpt = getExcerpt article
+    articleContent = article.contentRenderedWithoutLayouts
+    useExcerpt = useExcerpt or false
+    linkTitle = linkTitle or false
+    type = type or 'post'
+    articleClasses = articleClasses or []
+    articleClasses.push(type)
+    if useExcerpt
+        articleClasses.push('excerpt')
+#}
+<article class="#{ articleClasses.join(' ') }">
+    <header>
+        {#
+            if linkTitle
+                {:<h1><a href="#{ article.url }">#{article.title}</a></h1>:}
+            else
+                {:<h1>#{ article.title }</h1>:}
+            if type!='page'
+                {:<time datetime="#{ getPostDate article, 'YYYY-MM-DD' }">#{ getPostDate article, site.dateFormatLong }</time>:}
+        #}
+    </header>
+    <div class="content">
+        {#
+            if useExcerpt
+                {:<p>#{articleExcerpt}</p>:}
+                {:<a href="#{ article.url }" class="read-more"></a>:}
+            else
+                {:#{articleContent}:}
+        #}
+    </div>
+</article>
