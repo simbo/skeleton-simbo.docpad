@@ -47,6 +47,8 @@ module.exports =
             moment.locale 'de'
             moment
 
+        _s: require 'underscore.string'
+
         getPreparedTitle: ->
             if @document.title
                 "#{@document.title} | #{@site.title}"
@@ -60,6 +62,15 @@ module.exports =
             post = post or @document
             format = format or @site.dateFormat
             @moment(post.date).format(format)
+
+        getExcerpt: (post) ->
+            excerpt = (post or @document).contentRenderedWithoutLayouts
+            moreTag = /<!--\s*more\s*-->/i.exec(excerpt)
+            if moreTag
+                excerpt = @_s.trim @_s.stripTags( excerpt[0..moreTag.index-1] )
+            else
+                excerpt = @_s.prune @_s.stripTags(excerpt), @site.excerptLength, '&hellip;'
+            excerpt
 
     # =================================
     # Collections
