@@ -34,8 +34,8 @@ module.exports =
             jqueryVersion:              '2.1.1'
             googleAnalytics:            'UA-12345678-9'
             googleFonts:                [
-                                            'Istok+Web:400,400italic,700,700italic:latin'
-                                            'Anonymous+Pro:400,400italic,700,700italic:latin'
+                                            'Open+Sans:300italic,400italic,700italic,700,300,400:latin'
+                                            'Source+Code+Pro:400,700:latin'
                                         ]
             dateFormat:                 "Do MMM YYYY"
             dateFormatShort:            "DD.MM.YY"
