@@ -1,0 +1,15 @@
+#{ partial 'head' }
+<main class="archive">
+    <ul class="posts">
+        {#
+            for doc in getCollection('posts').toJSON()
+                {:<li>#{
+                    partial 'article',
+                        article:    doc
+                        useExcerpt: true
+                        linkTitle:  true
+                }</li>:}
+        #}
+    </ul>
+</main>
+#{ partial 'foot' }
