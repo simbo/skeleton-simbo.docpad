@@ -81,7 +81,8 @@ module.exports =
         # all posts, ordered by descending date
         posts: (database) ->
             @getCollection('html').findAllLive
-                relativeOutDirPath: '_posts'
+                relativeOutDirPath:
+                    $startsWith: 'posts'
             , [ date: -1 ]
             .on 'add', (document) ->
                 document.setMetaDefaults
@@ -91,7 +92,8 @@ module.exports =
         pages: (database) ->
             collection = @getCollection('html').findAllLive
                 relativeOutDirPath:
-                    $ne: '_posts'
+                    $ne:
+                        $startsWith: 'posts'
             , [ title: 1 ]
 
         # cleanurls collection, providing 'skipCleanUrls' meta option
