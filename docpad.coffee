@@ -4,6 +4,10 @@
 # =====================================================================
 ###
 
+# moment.js
+moment = require 'moment'
+moment.locale 'de'
+
 module.exports =
 
     # =================================
@@ -42,10 +46,7 @@ module.exports =
             dateFormatLong:             "dddd, Do MMMM YYYY"
             excerptLength:              140
 
-        moment: do ->
-            moment = require 'moment'
-            moment.locale 'de'
-            moment
+        moment: moment
 
         _s: require 'underscore.string'
 
