@@ -1,0 +1,21 @@
+---
+title: Toffee Tests
+layout: page
+---
+
+<h1>#{ document.title }</h1>
+
+<ul>
+    {#
+        for doc in getCollection('documents').toJSON() {:
+            <li>
+                <a href="#{doc.url}">
+                    #{ if doc.title then doc.title else "(no title)" }
+                </a>
+            </li>
+        :}
+    #}
+</ul>
+
+
+

@@ -162,7 +162,7 @@ module.exports =
             generateBefore:             false
             generateAfter:              [
                                             'build'
-                                            'clean:out_cleanup'
+                                            # 'clean:out_cleanup'
                                         ]
 
         # https://github.com/docpad/docpad-plugin-cleanurls
@@ -170,6 +170,7 @@ module.exports =
             enabled:                    true
             collectionName:             'cleanurls'
             static:                     true
+            staticRedirectFile:         true
             trailingSlashes:            true
 
         # https://github.com/docpad/docpad-plugin-highlightjs/

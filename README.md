@@ -76,4 +76,9 @@ Further explanations and FAQ
 Notes
 --------------------------------------------------------------------------------
 
-http://takitapart.com/posts/organizing-docpad/
+- http://takitapart.com/posts/organizing-docpad/
+- https://github.com/ervwalter/ewalnet-docpad
+- https://github.com/w33ble/joefleming-net
+- https://github.com/docpad/docpad-plugin-cleanurls/issues/9
+- http://emmet.io/blog/docpad/
+
