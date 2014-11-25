@@ -32,8 +32,6 @@
     "docpad-plugin-cleanurls": "~2.7.0",
     "docpad-plugin-coffeescript": "~2.4.0",
     "docpad-plugin-consolidate": "~2.1.0",
-    "docpad-plugin-datefromfilename": "~2.0.4",
-    "docpad-plugin-dateurls": "~2.4.0",
     "docpad-plugin-grunt": "~2.1.1",
     "docpad-plugin-highlightjs": "~2.3.0",
     "docpad-plugin-partials": "~2.9.1",

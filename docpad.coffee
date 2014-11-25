@@ -8,6 +8,9 @@
 moment = require 'moment'
 moment.locale 'de'
 
+# regexp for post date in filenames
+postFilenameDateRegExp = /\b(\d{4})[-_]?(\d{2})[-_]?(\d{2})[-_]?/
+
 module.exports =
 
     # =================================
@@ -110,7 +113,23 @@ module.exports =
                 # set default layout for posts
                 document.setMetaDefaults
                     layout: 'post'
+                # if post basename contains date, set post date
+                if postDate = document.get('basename').match postFilenameDateRegExp
+                    postDate = new Date postDate[1] + '-' + postDate[2] + '-' + postDate[3]
+                    document.getMeta().set 'date', postDate
+                    document.set 'date', postDate
             @
+
+        renderBefore: (opts, next) ->
+            # walk through posts collection
+            @docpad.getCollection('posts').forEach (document) ->
+                # get post basename without date
+                postBasename = document.get('basename').replace postFilenameDateRegExp, ''
+                # set date slug in post url
+                postUrlDateSlug = moment.utc(document.get('date')).format('YYYY/MM')
+                # set post url by date and basename
+                document.setUrl "/posts/" + postUrlDateSlug + "/" + postBasename + "/"
+            next()
 
     # =================================
     # Plugin Configuration
@@ -145,17 +164,6 @@ module.exports =
                                             'build'
                                             'clean:out_cleanup'
                                         ]
-
-        # https://github.com/grassator/docpad-plugin-datefromfilename
-        datefromfilename:
-            removeDate:                 true
-            dateRegExp:                 /\b(\d{4})-(\d{2})-(\d{2})-/
-
-        # https://github.com/mgroves84/docpad-plugin-dateurls
-        dateurls:
-            cleanurl:                   true
-            collectionName:             'posts'
-            dateFormat:                 '/YYYY/MM'
 
         # https://github.com/docpad/docpad-plugin-cleanurls
         cleanurls:
