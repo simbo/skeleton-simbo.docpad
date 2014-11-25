@@ -38,4 +38,14 @@ module.exports =
                 '<%= globalConfig.out %>/_posts'
             ]
 
+    # assets-dev styles in /out
+    out_assetsdev_styles: [
+                '<%= globalConfig.assetsDev %>/stylus'
+            ]
+
+    # assets-dev scripts in /out
+    out_assetsdev_scripts: [
+                '<%= globalConfig.assetsDev %>/coffee'
+            ]
+
 # = Task Config: Clean

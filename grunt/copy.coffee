@@ -31,5 +31,16 @@ module.exports =
         rename:     (dest, src) ->
                         dest + src.replace( /\.css$/, ".styl" )
 
+    # assets-dev styles from src to out
+    assetsdev_styles_src_out:
+        expand:     true
+        src:        '<%= globalConfig.rawAssetsDev %>/stylus'
+        dest:       '<%= globalConfig.assetsDev %>/stylus'
+
+    # assets-dev scripts from src to out
+    assetsdev_scripts_src_out:
+        expand:     true
+        src:        '<%= globalConfig.rawAssetsDev %>/coffee'
+        dest:       '<%= globalConfig.assetsDev %>/coffee'
 
 # = Task Config: Copy dependency files

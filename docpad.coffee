@@ -27,6 +27,13 @@ module.exports =
     ignoreCustomPatterns:               false
 
     # =================================
+    # Watchr Config
+    # https://github.com/bevry/watchr
+
+    watchOptions:
+        ignorePaths:                    [process.cwd() + '/src/static/assets-dev']
+
+    # =================================
     # Template data and functions
 
     templateData:
@@ -104,6 +111,8 @@ module.exports =
 
     # =================================
     # Events
+    # https://docpad.org/docs/events
+    # https://docpad.org/docs/sequence
 
     events:
 
@@ -160,10 +169,8 @@ module.exports =
         grunt:
             writeAfter:                 false
             generateBefore:             false
-            generateAfter:              [
-                                            'build'
-                                            # 'clean:out_cleanup'
-                                        ]
+            generateAfter:              false
+            serverBefore:               ['watch:main_styles']
 
         # https://github.com/docpad/docpad-plugin-cleanurls
         cleanurls:
