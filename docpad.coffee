@@ -36,6 +36,7 @@ module.exports =
             description:                """
                                         Some informative description for search engine results.
                                         """
+            url:                        "http://myawesomedocpadsite.io"
             styles:                     ['/assets/css/main.min.css']
             scripts:                    ['/assets/js/main.min.js']
             jqueryVersion:              '2.1.1'
@@ -204,13 +205,6 @@ module.exports =
     # Environment Configuration
 
     environments:
-
-        production:
-            port:                       9775
-            maxAge:                     86400000
-            templateData:
-                site:
-                    url:                "http://myawesomedocpadsite.io"
 
         development:
             port:                       9005
