@@ -84,9 +84,6 @@ module.exports =
                 relativeOutDirPath:
                     $startsWith: 'posts'
             , [ date: -1 ]
-            .on 'add', (document) ->
-                document.setMetaDefaults
-                    layout: 'post'
 
         # all pages (not posts), ordered by ascending title
         pages: (database) ->
@@ -101,6 +98,19 @@ module.exports =
             @getCollection('html').findAllLive
                 skipCleanUrls:
                     $ne: true
+
+    # =================================
+    # Events
+
+    events:
+
+        extendCollections: (opts) ->
+            # when adding items to posts collection
+            @docpad.getCollection('posts').on 'add', (document) ->
+                # set default layout for posts
+                document.setMetaDefaults
+                    layout: 'post'
+            @
 
     # =================================
     # Plugin Configuration
